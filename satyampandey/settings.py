@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+     'cloudinary_storage',
+    'cloudinary',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'ckeditor',
@@ -143,10 +145,9 @@ CKEDITOR_CONFIGS = {
         'width': '100%',
     },
 }
-# cloudinary
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': 'hgbmwikqg',
-#     'API_KEY': '986611473958878',
-#     'API_SECRET': '0cIDXXqjeUauELv5NNVV7tcR3kE',
-# }
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hdxtw2afv',
+    'API_KEY': '953864774518216',
+    'API_SECRET': 'uxntMAKVQptfKxLXWdA661jOIqQ',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
