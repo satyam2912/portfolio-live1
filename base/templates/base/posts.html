@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+{%load static%}
+{% block content %}
+<div class="main-container">
+    <h1>Posts</h1>
+    <div class="post-wrapper">
+        {% for post in posts%}
+        <div>
+            <div class="post">
+                <img class="thumbnail" src="{{post.thumbnail.url}}">
+                <div class="post-preview">
+                    <h6 class="post-title">{{post.headline}}</h6>
+                    <p class="post-intro">{{post.sub_headline}}</p>
+                    <a href="{% url 'post' post.slug%}">Read More</a>
+                    <hr>
+                    {% for tag in post.tags.all %}
+                    <span>{{tag}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <h2>No posts Found..</h2>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock content%}
